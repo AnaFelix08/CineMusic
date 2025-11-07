@@ -4,7 +4,7 @@ O CineMusic é a sua base de dados definitiva, construída pela comunidade, para
 
 Nascido da paixão por trilhas sonoras e análise musical, o CineMusic vai além de listar músicas: ele se propõe a catalogar e validar as referências cruzadas, aquele momento em que uma trilha sonora de filme ou série se inspira ou faz uma citação direta a uma obra musical clássica, popular ou anterior.
 
-##Como Funciona?
+Como Funciona?
 Contribuição Especializada: Usuários especialistas podem cadastrar referências detalhadas, fornecendo a justificativa e tags técnicas (como motivo temático ou instrumentação).
 
 Validação Comunitária: A credibilidade é construída por meio do voto. Críticos, pesquisadores e fãs podem votar ('Concordo' ou 'Discordo') e justificar a validade de uma referência, elevando o rigor da base de dados.
