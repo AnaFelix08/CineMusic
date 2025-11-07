@@ -7,7 +7,9 @@
 ## Como Funciona?
 
   Usuários especialistas podem cadastrar referências detalhadas, fornecendo a justificativa e tags técnicas (como motivo temático ou instrumentação).
+  
   A credibilidade é construída por meio do voto. Críticos, pesquisadores e fãs podem votar ('Concordo' ou 'Discordo') e justificar a validade de uma referência, elevando o rigor da base de dados.
+  
   Fãs e pesquisadores podem filtrar referências por Status de Validação ('Validada' ou 'Em Discussão') e, crucialmente, acessar links diretos (Spotify, YouTube, etc.) para comparar o trecho do filme com a inspiração original imediatamente.
 
 O CineMusic transforma a experiência de assistir a um filme em uma jornada de descoberta musical e análise crítica. É o ponto de encontro entre o entusiasta cinematográfico e o musicólogo.
