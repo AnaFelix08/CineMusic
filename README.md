@@ -45,36 +45,3 @@ O projeto CineMusic visa criar uma plataforma de referência cruzada de trilhas 
 | **Fluxo Principal** | 1. O Ator visualiza uma `ReferenciaCruzada` e seus detalhes. <br> 2. O Ator seleciona o tipo de voto ("Concordo" / "Discordo"). <br> 3. O Ator pode **(Opcional)** `Adicionar um Comentário` (**<<extend>> CU8**) justificando o voto. <br> 4. O Ator confirma a submissão. <br> 5. O sistema registra o `Voto`, atualiza o score da referência e exibe a contagem atualizada. |
 | **Fluxo Alternativo** | **3a. Voto Duplicado:** Se o Ator tentar votar novamente na mesma referência, o sistema pergunta: "Deseja atualizar seu voto anterior?" e, se confirmado, substitui o `Voto` existente. |
 
-## 🗺️ Semana 2: Diagrama de Casos de Uso (UML)
-
-O Diagrama de Casos de Uso (CU) mapeia as interações dos atores (Usuário Comum e Especialista) com o sistema.
-```mermaid
-graph TD
-A1(Entusiasta/Fã/Pesquisador)
-A2(Especialista/Crítico)
-
-CU1([Buscar Obra Audiovisual])
-CU2([Consultar Trilha Sonora Completa])
-CU3([Buscar Referências e Filtrar])
-CU4([Acessar Link de Comparação])
-CU5([Cadastrar Referência Cruzada])
-CU6([Votar e Justificar Avaliação])
-CU7([Adicionar Tags Técnicas])
-CU8([Justificar Voto - Comentário])
-
-CU2 -- <<include>> --> CU1
-CU3 -- <<include>> --> CU1
-CU5 -- <<extend>> --> CU7
-CU6 -- <<extend>> --> CU8
-
-A1 --> CU1
-A1 --> CU2
-A1 --> CU3
-A1 --> CU4
-A1 --> CU6
-A2 --> CU1
-A2 --> CU2
-A2 --> CU3
-A2 --> CU4
-A2 --> CU5
-A2 --> CU6
