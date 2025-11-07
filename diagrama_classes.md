@@ -57,7 +57,7 @@ classDiagram
         + getReferenciasPorTag(): List<ReferenciaCruzada>
     }
 
-    % RELACIONAMENTOS (Associações e Multiplicidade)
+    %% RELACIONAMENTOS (Associações e Multiplicidade)
     Usuario "1" -- "0..*" ReferenciaCruzada : Cadastra
     Usuario "1" -- "0..*" Voto : Realiza
     Usuario "1" -- "0..*" Comentario : Escreve
