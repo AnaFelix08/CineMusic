@@ -69,8 +69,7 @@ subgraph CineMusic System
     CU6 -- <<extend>> --> CU8
     
 end
-
-% Atores
+% Atores (Estes vêm DEPOIS do fechamento do subgrafo, mas dentro do 'graph TD')
 A1(Entusiasta/Fã/Pesquisador)
 A2(Especialista/Crítico)
 
