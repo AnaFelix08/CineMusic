@@ -57,40 +57,6 @@ Consultar Trilha Sonora Completa (Para acessar todas as músicas de um filme/sé
 Buscar e Filtrar Referências (Permite pesquisar por obra, compositor ou Status de Validação).
 Visualizar Links de Comparação (Para acessar diretamente os trechos musicais no Spotify/YouTube).
 
-```markdown
-# Diagrama de Caso de Uso
-
-```mermaid
-graph TD
-A1(Entusiasta/Fã/Pesquisador)
-A2(Especialista/Crítico)
-
-CU1([Buscar Obra Audiovisual])
-CU2([Consultar Trilha Sonora Completa])
-CU3([Buscar Referências e Filtrar])
-CU4([Acessar Link de Comparação])
-CU5([Cadastrar Referência Cruzada])
-CU6([Votar e Justificar Avaliação])
-CU7([Adicionar Tags Técnicas])
-CU8([Justificar Voto - Comentário])
-
-CU2 -- <<include>> --> CU1
-CU3 -- <<include>> --> CU1
-CU5 -- <<extend>> --> CU7
-CU6 -- <<extend>> --> CU8
-
-A1 --> CU1
-A1 --> CU2
-A1 --> CU3
-A1 --> CU4
-A1 --> CU6
-A2 --> CU1
-A2 --> CU2
-A2 --> CU3
-A2 --> CU4
-A2 --> CU5
-A2 --> CU6
-
 ## 1. UC-01: Cadastrar Referência Cruzada
 
 ### 1.1. Visão Geral
@@ -143,6 +109,40 @@ A2 --> CU6
 ### 2.4. Fluxo Alternativo
 
 * **FA-01: Mudança de Voto:** Se o usuário já tiver votado, o sistema permite **alterar o voto** e, se for o caso, modificar a justificativa.
+
+```markdown
+# Diagrama de Caso de Uso
+
+```mermaid
+graph TD
+A1(Entusiasta/Fã/Pesquisador)
+A2(Especialista/Crítico)
+
+CU1([Buscar Obra Audiovisual])
+CU2([Consultar Trilha Sonora Completa])
+CU3([Buscar Referências e Filtrar])
+CU4([Acessar Link de Comparação])
+CU5([Cadastrar Referência Cruzada])
+CU6([Votar e Justificar Avaliação])
+CU7([Adicionar Tags Técnicas])
+CU8([Justificar Voto - Comentário])
+
+CU2 -- <<include>> --> CU1
+CU3 -- <<include>> --> CU1
+CU5 -- <<extend>> --> CU7
+CU6 -- <<extend>> --> CU8
+
+A1 --> CU1
+A1 --> CU2
+A1 --> CU3
+A1 --> CU4
+A1 --> CU6
+A2 --> CU1
+A2 --> CU2
+A2 --> CU3
+A2 --> CU4
+A2 --> CU5
+A2 --> CU6
 
 classDiagram
 direction LR
