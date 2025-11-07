@@ -1,7 +1,5 @@
 # CineMusic
-Entregáveis do projeto CineMusic.
 
-# CineMusic
 O CineMusic é a sua base de dados definitiva, construída pela comunidade, para explorar a intertextualidade entre a música e o cinema.
 
 Nascido da paixão por trilhas sonoras e análise musical, o CineMusic vai além de listar músicas: ele se propõe a catalogar e validar as referências cruzadas — aquele momento em que uma trilha sonora de filme ou série se inspira ou faz uma citação direta a uma obra musical clássica, popular ou anterior.
