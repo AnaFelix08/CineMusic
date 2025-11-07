@@ -50,36 +50,28 @@ O projeto CineMusic visa criar uma plataforma de referência cruzada de trilhas 
 O Diagrama de Casos de Uso (CU) mapeia as interações dos atores (Usuário Comum e Especialista) com o sistema.
 ```mermaid
 graph TD
-subgraph CineMusic System
-    direction LR
-    
-    CU1([Buscar Obra Audiovisual])
-    CU2([Consultar Trilha Sonora Completa])
-    CU3([Buscar Referências e Filtrar])
-    CU4([Acessar Link de Comparação])
-    CU5([Cadastrar Referência Cruzada])
-    CU6([Votar e Justificar Avaliação])
-    CU7([Adicionar Tags Técnicas])
-    CU8([Justificar Voto - Comentário])
-
-    % Relações de Inclusão e Extensão (UML)
-    CU2 -- <<include>> --> CU1
-    CU3 -- <<include>> --> CU1
-    CU5 -- <<extend>> --> CU7
-    CU6 -- <<extend>> --> CU8
-    
-end
-% Atores
 A1(Entusiasta/Fã/Pesquisador)
 A2(Especialista/Crítico)
 
-% Conexões dos Atores
+CU1([Buscar Obra Audiovisual])
+CU2([Consultar Trilha Sonora Completa])
+CU3([Buscar Referências e Filtrar])
+CU4([Acessar Link de Comparação])
+CU5([Cadastrar Referência Cruzada])
+CU6([Votar e Justificar Avaliação])
+CU7([Adicionar Tags Técnicas])
+CU8([Justificar Voto - Comentário])
+
+CU2 -- <<include>> --> CU1
+CU3 -- <<include>> --> CU1
+CU5 -- <<extend>> --> CU7
+CU6 -- <<extend>> --> CU8
+
 A1 --> CU1
 A1 --> CU2
 A1 --> CU3
 A1 --> CU4
 A1 --> CU6
-    
 A2 --> CU1
 A2 --> CU2
 A2 --> CU3
