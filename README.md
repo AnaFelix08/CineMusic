@@ -111,6 +111,8 @@ Visualizar Links de Comparação (Para acessar diretamente os trechos musicais n
 
 # Diagrama de Caso de Uso
 
+## 🗺️ Semana 2: Diagrama de Casos de Uso (UML)
+
 ```mermaid
 graph TD
 A1(Entusiasta/Fã/Pesquisador)
