@@ -1,0 +1,29 @@
+sequenceDiagram
+    actor Especialista as Especialista/Crítico
+
+    participant T1 as TelaInicial
+    participant T2 as TelaCadastroReferencia
+
+    participant U as Usuario
+    participant OA as ObraAudiovisual
+    participant OR as ObraReferencia
+    participant RC as ReferenciaCruzada
+
+    Especialista ->> T1: acessarSistema()
+    T1 ->> U: logar()
+
+    U ->> T2: abrirTelaCadastroReferencia()
+
+    T2 ->> OA: selecionarObraAudiovisual()
+    OA -->> T2: dadosObraAudiovisual()
+
+    T2 ->> OR: selecionarObraReferencia()
+    OR -->> T2: dadosObraReferencia()
+
+   T2 ->> U: cadastrarReferencia(ref: ReferenciaCruzada)
+
+    U ->> RC: criar(obraA, obraB, justificativa, dataCadastro)
+
+    RC -->> U: referenciaCriada()
+
+    U -->> T2: exibirConfirmacaoCadastro()
