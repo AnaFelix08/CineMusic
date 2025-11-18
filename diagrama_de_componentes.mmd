@@ -1,0 +1,26 @@
+flowchart LR
+
+    subgraph Frontend
+        APP[App Mobile/Web]
+    end
+
+    subgraph Backend
+        API[API REST - Backend]
+        Auth[Serviço de Autenticação]
+        ModRef[Modulo de Referências Cruzadas]
+        ModVal[Modulo de Validação e Votos]
+    end
+
+    subgraph Data
+        DB[(Banco de Dados)]
+        Arqs[(Storage de Mídia - Links/Arquivos)]
+    end
+
+    APP --> API
+    API --> Auth
+    API --> ModRef
+    API --> ModVal
+    API --> DB
+    ModRef --> DB
+    ModVal --> DB
+    ModRef --> Arq
