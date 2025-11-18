@@ -1,0 +1,29 @@
+stateDiagram-v2
+    [*] --> Criada
+
+    %% ESTADO INICIAL APÓS CADASTRO
+    Criada : Referência cadastrada por especialista
+    Criada : Status = "Não Validada"
+    Criada --> EmDiscussao : Receber primeiro voto
+
+    %% FASE DE DISCUSSÃO/ACÚMULO DE VOTOS
+    state EmDiscussao {
+        [*] --> ColetandoVotos
+        ColetandoVotos --> AguardandoMaisVotos : Nenhum consenso
+        AguardandoMaisVotos --> ColetandoVotos : Novo voto recebido
+    }
+
+    EmDiscussao : Status = "Em Discussão"
+
+    %% AVALIAÇÃO DO STATUS
+    EmDiscussao --> Validada : Score >= LimiteAprovacao
+    EmDiscussao --> Rejeitada : Score <= LimiteRejeicao
+
+    %% ESTADOS FINAIS
+    Validada : Referência confirmada pela comunidade
+    Validada : Status = "Validada"
+    Rejeitada : Maioria discorda da validade
+    Rejeitada : Status = "Não Validada"
+
+    Validada --> [*]
+    Rejeitada --> [*]
