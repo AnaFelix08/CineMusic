@@ -1,0 +1,17 @@
+flowchart LR
+ subgraph UserDevice["Celular/Computador do Usuário"]
+        AppMobile["App Mobile ou Navegador Web"]
+  end
+ subgraph Cloud["Servidor na Nuvem (AWS, Azure, GCP)"]
+        APIBackend["API Backend"]
+        AuthServ["Serviço de Autenticação"]
+        ModRefServ["Módulo de Referências"]
+        ModValServ["Módulo de Validação/Votos"]
+  end
+ subgraph DatabaseLayer["Camada de Dados"]
+        DB[("Banco de Dados Relacional")]
+        MediaStorage[("Storage de Áudio/Vídeo")]
+  end
+    AppMobile --> APIBackend
+    APIBackend --> AuthServ & ModRefServ & ModValServ & DB
+    ModRefServ --> MediaStorage
