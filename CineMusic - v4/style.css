@@ -1,0 +1,161 @@
+/* ==================================================
+   C I N E M U S I C  –  T H E M E   P R O 2 . 0
+   Layout moderno, neon cinematográfico e vidro fosco
+   ================================================== */
+
+/* ===== RESET ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== GERAL ===== */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: radial-gradient(circle at top, #4c1d95, #2e1065 40%, #0f021f 90%);
+    background-attachment: fixed;
+    color: #eee;
+    line-height: 1.6;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(14px) brightness(1.2);
+    padding: 40px;
+    max-width: 1100px;
+    margin: 50px auto;
+    border-radius: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.45);
+    color: #eee;
+}
+
+/* ===== TITULOS ===== */
+h1, h2, h3, h4 {
+    font-weight: 600;
+}
+
+.section-title {
+    color: #c084fc;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    border-left: 6px solid #a855f7;
+    padding-left: 12px;
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
+
+/* ===== HERO (CABEÇALHO) ===== */
+.hero {
+    height: 180px;                     
+    background: transparent;           
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #eee;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.hero::after {
+    display: none;   /* remove o efeito de overlay */
+}
+
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+}
+
+.hero-content h1 {
+    font-size: 2.6rem;
+    font-weight: 700;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.7);
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* ===== TABELAS ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+}
+
+table th {
+    background: linear-gradient(135deg, #9333ea, #6d28d9);
+    color: white;
+    padding: 14px;
+    text-align: left;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
+
+table td {
+    background: rgba(255, 255, 255, 0.06);
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+table tr:hover td {
+    background: rgba(255,255,255,0.12);
+    transition: 0.2s;
+}
+
+/* ===== LISTAS ===== */
+ul, ol {
+    margin-left: 25px;
+}
+
+ul li, ol li {
+    margin: 10px 0;
+    color: #f3e8ff;
+}
+
+/* ===== IMAGENS ===== */
+img {
+    width: 100%;
+    border-radius: 14px;
+    margin: 25px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* ===== LINKS ===== */
+a {
+    color: #c084fc;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #e9d5ff;
+    text-shadow: 0 0 8px #d8b4fe;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .container { padding: 25px; }
+    .hero { height: 250px; }
+    .hero-content h1 { font-size: 2rem; }
+    table th, table td { font-size: 0.9rem; }
+}

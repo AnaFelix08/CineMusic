@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Dossiê de Análise e Projeto de Sistemas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+    <div class="hero-content">
+        <h1>CineMusic</h1>
+        <p>Descubra, conecte e explore trilhas sonoras como nunca antes.</p>
+    </div>
+</header>
+
+<div class="container">
+
+    <h2 class="section-title">Dossiê de Análise e Projeto de Sistemas</h2>
+
+    <section>
+        <h2 class="section-title">1. Identificação da Equipe</h2>
+        <table>
+            <tr><th>Nome Completo</th><th>Prontuário/Matrícula</th><th>Papel</th></tr>
+            <tr><td>Ana Carolina Moeira Ferreira</td><td>BV3054721</td><td>Todos</td></tr>
+            <tr><td>Ana Clara Silva Felix</td><td>BV3060161</td><td>Todos</td></tr>
+        </table>
+    </section>
+
+    <section>
+        <h2 class="section-title">2. Concepção do Projeto</h2>
+
+        <h3>2.1 O Problema</h3>
+        <p> Críticos, estudantes e entusiastas de música de cinema frequentemente identificam referências e inspirações em trilhas sonoras (ex: um tema de filme que soa como uma obra clássica anterior).</p>
+
+        <h3>2.2 Dificuldade</h3>
+        <p> Atualmente, essa análise é dispersa em fóruns, artigos e conversas informais. Não há uma plataforma centralizada e colaborativa que permita catalogar, comparar e, crucialmente, 
+            validar essas referências de forma estruturada. Isso dificulta a pesquisa acadêmica e a discussão precisa sobre a intertextualidade musical no cinema.</p>
+        
+        <h3>2.3 A Solução Proposta</h3>
+        <p>O CineMusic será um sistema de base de dados colaborativa focado em referências musicais cruzadas entre obras de cinema/audiovisual e músicas de referência (clássicas, populares, etc.).</p>
+
+        <h3>2.4 Escopo do Projeto</h3>
+        <p><strong>Funcionalidades principais: </strong></p>
+        <ul>
+            <li>Cadastro de Entradas</li>
+            <li>Validação Comunitária</li>
+            <li>Visualização</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">3. Engenharia de Requisitos</h2>
+
+        <h3>3.1 Atores</h3>
+        <table>
+            <tr><th>Ator</th><th>Descrição</th></tr>
+            <tr><td>Usuário Especialista</td><td>Profissional com conhecimento técnico em música e trilhas sonoras. Identifica e cadastra referências cruzadas, aplica tags detalhadas e participa da validação crítica das conexões musicais.</td></tr>
+            <tr><td>Usuário Comum (incluindo Críticos)</td><td>Usuário geral interessado em cinema e música. Navega pelas trilhas sonoras, encontra referências e acessa facilmente os trechos musicais sem necessidade de conhecimento técnico.</td></tr>
+        </table>
+
+        <h3>3.2 Histórias de Usuário</h3>
+        <ul>
+            <li>"Como usuário especialista, eu preciso cadastrar uma Referência Cruzada (conectando um Trecho Musical de Filme a um Trecho Musical de Referência) para que a comunidade possa analisar, debater e validar a conexão musical proposta."</li></br>
+            <li>"Como um Especialista em Trilhas Sonoras, eu desejo adicionar tags detalhadas (como Instrumentação, Motivo Temático, Período Clássico, etc.) ao registrar uma Referência Cruzada, permitindo que outros usuários possam filtrar o conteúdo com maior precisão técnica e acadêmica."</li></br>
+            <li>"Como um Crítico de Cinema e Música, eu quero votar e justificar minha concordância ou discordância em uma Referência Cruzada já existente, garantindo que a base de dados mantenha um alto nível de credibilidade e rigor na análise intertextual."</li></br>
+            <li>"Como um fã de Cinema e Música, eu quero encontrar as referências e inspirações musicais da trilha sonora da obra que estou assistindo, para que eu possa aprofundar meu entendimento e apreciação sobre a intertextualidade musical no cinema."</li></br>
+            <li>"Como usuário comum, eu gostaria de acessar todas as músicas de um filme/série com mais facilidade, eliminando a necessidade de realizar pesquisas extensas em múltiplas plataformas."</li></br>
+            <li>"Como um fã de Cinema e Música, eu desejo clicar no link de uma Referência Válida, para ser levado diretamente ao trecho musical correspondente (no Spotify, YouTube ou outra plataforma), permitindo a comparação imediata do trecho do filme com a inspiração original."</li></br>
+            <li>"Como pesquisador, eu preciso filtrar as referências por Status de Validação ("Validada" ou "Em Discussão"), de forma a focar minha pesquisa apenas nas conexões que já possuem maior aceitação e consenso da comunidade especializada."</li></br>
+        </ul>
+    </section>
+
+    <section>
+        <h2 class="section-title">4. Modelagem Funcional</h2>
+
+        <h3>4.1 Diagrama de Casos de Uso</h3>
+        <img src="diagrama_caso_de_uso.png" alt="Diagrama de Caso de Uso">
+
+        <h3>4.2 Descrições dos Casos de Uso</h3>
+        <h4><br>UC-01: Cadastrar Referência Cruzada</h4>
+        <p><strong>Ator Principal:</strong>Usuário Especialista</p>
+        <p><strong>Descrição:</strong>Inserir uma nova conexão musical no banco de dados, enriquecida com detalhes técnicos, para iniciar o processo de validação comunitária.</p>
+        <p><strong>Pré-condições:</strong> O usuário especialista deve estar logado no sistema.</p>
+        <p><strong>Pós-condições:</strong> Uma nova Referência Cruzada, com seus respectivos links e tags, é registrada no sistema, aguardando a votação da comunidade.</p>
+
+        <p><strong>Fluxo Principal:</strong></p>
+        <ol>
+            <li>O Usuário Especialistsa acessa a tela de cadastro.</li><br>
+            <li>O sistema exibe o formulário.</li><br>
+            <li>O usuário insere os dados da Obra A (Filme/Trecho/Link) e Obra B (Referência/Compositor/Link).</li><br>
+            <li>O usuário adiciona uma Justificativa detalhada.</li><br>
+            <li>O usuário adiciona Tags técnicas (ex: Instrumentação, Motivo Temático).</li><br>
+            <li>O usuário confirma o cadastro.</li><br>
+            <li>O sistema registra a nova referência com o status inicial "Não Validada"</li><br>
+        </ol>
+
+        <h4>UC-02: Votar e Justificar Avaliação</h4>
+        <p><strong>Ator Principal:</strong> Usuário Comum (incluindo Críticos)</p>
+        <p><strong>Descrição:</strong>Permitir que o usuário contribua para a credibilidade da referência, registrando seu voto ("Concordo"/"Discordo") e fornecendo uma justificativa (comentário).</p>
+        <p><strong>Pré-condições:</strong>O usuário deve estar logado e a Referência Cruzada já deve estar cadastrada e visível.</p>
+        <p><strong>Pós-condições:</strong>O voto do usuário e a justificativa são registrados, e o Status de Validação da Referência é potencialmente atualizado.</p>
+
+        <p><strong>Fluxo Principal:</strong></p>
+        <ol>
+            <li>O Usuário acessa a página de uma Referência Cruzada específica.</li><br>
+            <li>O sistema exibe as opções de voto: "Concordo" ou "Discordo".</li><br>
+            <li>O usuário seleciona uma opção de voto.</li><br>
+            <li>Opcionalmente, o usuário adiciona um comentário detalhado (justificativa).</li><br>
+            <li>O sistema registra o voto e o comentário associado.</li><br>
+            <li>O sistema recalcula o score da referência. Se o score atingir limites predefinidos, o Status de Validação é atualizado (para "Em Discussão", "Validada" ou "Rejeitada").</li><br>
+        </ol>
+    </section>
+
+    <section>
+        <h2 class="section-title">5. Modelagem Estrutural</h2>
+        <h3>5.1 Diagrama de Classes</h3>
+        <img src="diagrama_classes.png" alt="Diagrama de Classes">
+    </section>
+
+    <section>
+        <h2 class="section-title">6. Modelagem Comportamental</h2>
+        <h3>6.1 Diagrama de Sequência</h3>
+        <img src="diagrama_sequencia.png" alt="Diagrama de Sequência">
+        <h3>6.2 Diagrama de Estados</h3>
+        <img src="diagrama_estados.png" alt="Diagrama de Estados">
+    </section>
+
+    <section>
+        <h2 class="section-title">7. Arquitetura e Implantação</h2>
+        <h3>6.1 Diagrama de Implantação</h3>
+        <img src="diagrama_implantação.png" alt="Diagrama de Implantação">
+        <h3>6.1 Diagrama de Componentes</h3>
+        <img src="diagrama_componentes.png" alt="Diagrama de Componentes">
+    </section>
+
+    <section>
+        <h2 class="section-title">8. Conclusão</h2>
+        <p>Durante a modelagem do CineMusic, enfrentamos desafios importantes, especialmente ao definir com precisão os requisitos, 
+            diferenciar claramente os papéis dos usuários e representar de forma adequada os fluxos de validação das referências musicais. 
+            Também percebemos que equilibrar a simplicidade necessária para o usuário comum com a profundidade técnica esperada pelos especialistas 
+            exigiu revisões constantes dos diagramas e das histórias de usuário. Esses desafios nos permitiram desenvolver uma compreensão mais sólida 
+            sobre análise de sistemas, abstração de funcionalidades e importância de uma documentação bem estruturada, resultando em um projeto mais 
+            coerente e alinhado às necessidades reais dos usuários.</p>
+    </section>
+</div>
+
+</body>
+</html>
